@@ -9,6 +9,8 @@
 \usepackage{algpseudocode}
 \usepackage[linesnumbered,ruled,lined]{algorithm2e}
 \usepackage{listings}
+\usepackage{amsmath}
+
 
 \lstset{
 	columns=fixed,       
@@ -82,8 +84,8 @@
 	\textbackslash\emph{emph}\\
 	
 	
-	\textbackslash textcolor{red}
-	\noindent\textcolor{red}{red/blue/green/black/white/cyan/magenta/yellow是系统定义颜色}\\
+	\noindent\textbackslash textcolor\{red\}\\
+	\textcolor{red}{red/blue/green/black/white/cyan/magenta/yellow是系统定义颜色}\\
 	\textbackslash textcolor[rgb]{0,1,0}{rgb(0, 1, 0)}
 	\textcolor[rgb]{0,1,0}{rgb(0, 1, 0)}\\
 	\textbackslash textcolor[RGB]{0,0,255}{RGB(0, 0, 255)}
@@ -102,19 +104,28 @@
 	\section{公式}
 	\subsection{行内公式}
 	\normalsize
-	\noindent\$ 1 +1=    2\$\\
-	这是一个行内公式$ 1 +1 =    2 $，它被嵌入到文中，公式中的空格不会产生效果。
-	
+	\noindent 行内公式使用\$来包裹公式，如：\$ 1 +1=\ \ \ \ 2\$\\
+	这是一个行内公式$ 1 +1 =    2 $，它被嵌入到文中，公式中多余的空格不会造成副作用。
 	
 	\subsection{行间公式}
-	\noindent\textbackslash[1+2=3\textbackslash]\\
-	这是一个行间公式
-	\[1+2=3\]他位于行间
+	\noindent 行间公式使用\textbackslash[ \textbackslash]， \$\$来包裹，当然也可以使用equation来包裹
 	
+	\noindent 这是一个行间公式\textbackslash [1+2=3\textbackslash]\\
+	\[1+2=3\] 他位于行间
+	$$E=MC^2$$
+	这也是个行间公式\$\$E=MC\^{}2\$\$
+	\begin{equation}
+		F = \frac{kQ_1Q_2}{R^2}
+	\end{equation}
+	\begin{lstlisting}
+\begin{equation}
+	F = \frac{kQ_1Q_2}{R^2}
+\end{equation}
+	\end{lstlisting}
+	
+
 	\subsection{上下标}
 	\begin{lstlisting}
-$1 = \sqrt[3]{1} = 1^2 = log_{10}{10} $
-
 $\sum_{i=1}^{10}{a_i}$
 
 $\int_{i=1}^{2}{x^2}$
@@ -132,10 +143,18 @@ $ \underbrace{A+B} $
 $\overline{A+B=C}$
 
 $\underline{A+B=C}$
+
+$  \lim_{x \to \infty} x^2_{22} - \int_{1}^{5}x\mathrm{d}x + \sum_{n=1}^{20} n^{2} = \prod_{j=1}^{3} y_{j}  + \lim_{x \to -2} \frac{x-2}{x} $
+
+\begin{equation}
+	\begin{split}
+		1 = \sqrt[3]{1} \\ 
+		= 1^2 \\
+		= log_{10}{10}
+	\end{split}
+\end{equation}
 	\end{lstlisting}
 	
-	$1 = \sqrt[3]{1} = 1^2 = log_{10}{10} $
-		
 	$\sum_{i=1}^{10}{a_i}$
 	
 	$\int_{i=1}^{2}{x^2}$
@@ -154,6 +173,77 @@ $\underline{A+B=C}$
 	
 	$\underline{A+B=C}$
 	
+	$ \lim_{x \to \infty} x^2_{22} - \int_{1}^{5}x\mathrm{d}x + \sum_{n=1}^{20} n^{2} = \prod_{j=1}^{3} y_{j}  + \lim_{x \to -2} \frac{x-2}{x} $
+	
+	\begin{equation}
+		\begin{split}
+		1 = \sqrt[3]{1} \\ 
+		= 1^2 \\
+		= log_{10}{10}
+		\end{split}
+	\end{equation}
+
+
+
+	
+	\subsection{大大型表达式}
+	需要\textbackslash usepackage\{amsmath\}
+	\subsubsection{花括号}
+	
+	\begin{lstlisting}
+$$ f(x)=\left\{
+\begin{aligned}
+	x\\
+	y\\
+	z
+\end{aligned}
+\right.
+$$
+	\end{lstlisting}	
+	
+	$$ f(x)=\left\{
+	\begin{aligned}
+		x\\
+		y\\
+		z
+	\end{aligned}
+	\right.
+	$$
+	
+	\begin{lstlisting}
+$$
+\overbrace{1+2+\cdots+n}^{n}
+\quad
+\underbrace{a+b+\cdots+z}_{m}
+$$
+	\end{lstlisting}
+	
+	$$
+	\overbrace{1+2+\cdots+n}^{n}
+	\quad
+	\underbrace{a+b+\cdots+z}_{m}
+	$$
+	
+	\subsubsection{矩阵}
+	\begin{lstlisting}
+\begin{equation}
+	\left[
+	\begin{array}{ccc}
+	1 & 2 & 3\\
+	4 & 5 & 6\\
+	\end{array}
+	\right]
+\end{equation}
+	\end{lstlisting}
+	
+	\begin{equation}
+	\left[
+	\begin{array}{ccc}
+		1 & 2 & 3\\
+		4 & 5 & 6\\
+	\end{array}
+	\right]
+	\end{equation}
 	
 	\section{列表}
 	\begin{lstlisting}
@@ -279,11 +369,9 @@ $\underline{A+B=C}$
 	\section{超链接}
 	\begin{lstlisting}
 这是一个超链接指向\href{www.baidu.com}{百度}
-	
 这是百度的url\url{www.baidu.com}
 	\end{lstlisting}
 	这是一个超链接指向\href{www.baidu.com}{百度}
-	
 	这是百度的url\url{www.baidu.com}
 	
 	\section{表格}
@@ -295,9 +383,9 @@ $\underline{A+B=C}$
 		\hline\noalign{\smallskip}
 		A & B & C & MAE & D \\
 		\noalign{\smallskip}\hline\noalign{\smallskip}
-		1 & 2.07 & 4.55% & 739.83 & 2.73%\\
-		3 & 1.66 & 6.62% & 1131.90 & 3.82%\\
-		7 & 2.49 & 11.31% & 5726.90 & 18.05%\\
+		1 & 2.07 & 4.55\% & 739.83 & 2.73%\\
+		3 & 1.66 & 6.62\% & 1131.90 & 3.82%\\
+		7 & 2.49 & 11.31\% & 5726.90 & 18.05%\\
 		\noalign{\smallskip}\hline
 	\end{tabular}
 \end{table}

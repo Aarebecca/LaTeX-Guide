@@ -100,8 +100,8 @@
 |:-:|:-|:-:|
 |圆括号|`\left(`<br>`\begin{aligned}`<br>&nbsp;&nbsp;&nbsp;&nbsp;`x\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`y\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`z`<br>`\end{aligned}`<br>`\right)`||
 |方括号|`\left[`<br>`\begin{aligned}`<br>&nbsp;&nbsp;&nbsp;&nbsp;`x\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`y\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`z`<br>`\end{aligned}`<br>`\right]`||
-|矩阵|`f(x)=\left\{`<br>`\begin{aligned}`<br>&nbsp;&nbsp;&nbsp;&nbsp;`x\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`y\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`z\end{aligned}`<br>`\right.`|$$f(x)=\left\{\begin{aligned} x\\ y\\ z \end{aligned}\right.$$|
-|花括号|`\begin{equation}`<br>`\left[`<br>`\begin{array}{ccc}`<br>`1 & 2 & 3\\`<br>`4 & 5 & 6\\`<br>`\end{array}`<br>`\right]`<br>`\end{equation}`|$$\left[\begin{matrix} 1 & 2 & 3 \\4 & 5 & 6\end{matrix}\right]$$|
+|花括号|`f(x)=\left\{`<br>`\begin{aligned}`<br>&nbsp;&nbsp;&nbsp;&nbsp;`x\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`y\\`<br>&nbsp;&nbsp;&nbsp;&nbsp;`z\end{aligned}`<br>`\right.`|$$f(x)=\left\{\begin{aligned} x\\ y\\ z \end{aligned}\right.$$|
+|矩阵|`\begin{equation}`<br>`\left[`<br>`\begin{array}{ccc}`<br>`1 & 2 & 3\\`<br>`4 & 5 & 6\\`<br>`\end{array}`<br>`\right]`<br>`\end{equation}`|$$\left[\begin{matrix} 1 & 2 & 3 \\4 & 5 & 6\end{matrix}\right]$$|
 
 
 
