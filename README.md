@@ -7,3 +7,9 @@
 
 ## 项目实战
 参考[CQUTheis](https://github.com/nanmu42/CQUThesis)
+
+
+## 附:
+
+[LaTex数学符号表](./LaTex_Math.md)<br>
+[LaTex官方文档](./usrguide.pdf)
